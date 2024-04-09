@@ -1,7 +1,35 @@
-const { sendEmails, formData } = require("../controller/userController");
+const {
+  sendEmails,
+  formData,
+  updateProject,
+  deleteProject,
+  addProject,
+  getAllProjects,
+  getProjectsDetails,
+  addMultipleImage,
+  registerAdmin,
+  loginAdmin,
+  getAllProAdmin,
+  logoutUser,
+} = require("../controller/userController");
 
 const router = require("express").Router();
 
-router.post("/sendemail", sendEmails);
+// login
+router.post("/register", registerAdmin);
+router.post("/login", loginAdmin);
+router.post("/logout", logoutUser);
+
+router.get("/sendemail", sendEmails);
 router.post("/form", formData);
+// projects routes
+router.get("/getPro", getAllProjects);
+router.get("/admin", getAllProAdmin);
+router.get("/details/:id", getProjectsDetails);
+router.post("/add-pro", addProject);
+router.delete("/delete-pro/:id", deleteProject);
+router.put("/update-pro/:id", updateProject);
+//
+router.post("/add-mulImg", addMultipleImage);
+
 module.exports = router;
