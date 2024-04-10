@@ -8,7 +8,8 @@ require("dotenv").config({ path: "./.env" });
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://dev-portfolio-rm9u.onrender.com",
     credentials: true,
   })
 );
@@ -17,9 +18,9 @@ app.use("/user", require("./routes/userRoutes"));
 app.use(express.static("projectImages"));
 app.use(express.static("projectMultiImages"));
 
-// app.use("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "dist", "index.html"));
-// });
+app.use("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 mongoose.connect(process.env.MONGO_URL);
 mongoose.connection.once("open", () => {
