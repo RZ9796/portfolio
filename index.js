@@ -13,10 +13,10 @@ app.use(
     credentials: true,
   })
 );
-// app.use(express.static(path.join(__dirname, "dist"))); //
-app.use("/user", require("./routes/userRoutes"));
 app.use(express.static("projectImages"));
 app.use(express.static("projectMultiImages"));
+app.use(express.static(path.join(__dirname, "dist"))); 
+app.use("/user", require("./routes/userRoutes"));
 
 app.use("*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
