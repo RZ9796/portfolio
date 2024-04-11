@@ -8,14 +8,14 @@ require("dotenv").config({ path: "./.env" });
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    // origin: "https://dev-portfolio-rm9u.onrender.com",
+    // origin: "http://localhost:5173",
+    origin: "https://dev-portfolio-rm9u.onrender.com",
     credentials: true,
   })
 );
 app.use(express.static("projectImages"));
 app.use(express.static("projectMultiImages"));
-// app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, "dist")));
 app.use("/user", require("./routes/userRoutes"));
 
 app.use("*", (req, res) => {
