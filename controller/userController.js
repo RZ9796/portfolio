@@ -162,6 +162,7 @@ exports.addMultipleImage = asynchandler(async (req, res) => {
 exports.registerAdmin = async (req, res) => {
   try {
     const { password } = req.body;
+    console.log(req.body);
     //its called as salt which generate length of password
     const hashPass = await bcrypt.hash(password, 10);
     await login.create({ ...req.body, password: hashPass });
@@ -176,7 +177,9 @@ exports.loginAdmin = async (req, res) => {
   try {
     const { email, password } = req.body;
     // check email & pass validation then login
+    console.log("LOGIN BODY", req.body);
     const result = await login.findOne({ email });
+    console.log("LOGIN BODY", result);
     if (!result) {
       return res.status(401).json({ message: "invalid email" });
     }
@@ -195,10 +198,11 @@ exports.loginAdmin = async (req, res) => {
     // token/ login
     res.status(201).json({
       message: "User Login Success",
-      result: {
-        name: result.name,
-        id: result._id,
-      },
+      // result: {
+      //   name: result.name,
+      //   id: result._id,
+      // },
+      result,
     });
   } catch (error) {
     res.status(500).json({
