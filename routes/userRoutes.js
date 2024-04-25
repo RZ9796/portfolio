@@ -20,7 +20,7 @@ router.post("/register", registerAdmin);
 router.post("/login", loginAdmin);
 router.post("/logout", logoutUser);
 
-router.get("/sendemail", sendEmails);
+router.post("/sendEmails", sendEmails);
 router.post("/form", formData);
 // projects routes
 router.get("/getPro", getAllProjects);
