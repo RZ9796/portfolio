@@ -1,0 +1,1 @@
+import{j as o,N as s}from"./index-f42bfcc2.js";import"./three-vendor-1a5bfa15.js";import{y as a}from"./redux-vendor-7b3399fd.js";import"./framer-motion-204bac0c.js";const p=({compo:t})=>{const{auth:r}=a(e=>e.user);return r?t:o.jsx(s,{to:"/admin"})};export{p as default};
