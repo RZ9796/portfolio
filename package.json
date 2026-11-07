@@ -2,11 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "build/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "tsx watch index.ts",
     "build": "tsc",
-    "start": "node build/index.js",
+    "start": "node index.js",
     "typecheck": "tsc --noEmit",
     "seed": "tsx seed.ts"
   },
