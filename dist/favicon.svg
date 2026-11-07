@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <!-- Outer Deep Cosmic Background -->
+    <linearGradient id="cosmicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#150836" />
+      <stop offset="50%" stop-color="#09031f" />
+      <stop offset="100%" stop-color="#030014" />
+    </linearGradient>
+
+    <!-- Neon Celestial Gradient Ring -->
+    <linearGradient id="neonRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Inner Clean Emblem Card Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f8f5ff" />
+      <stop offset="100%" stop-color="#ede9fe" />
+    </linearGradient>
+
+    <!-- Signature Calligraphy Monogram Gradient -->
+    <linearGradient id="inkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="40%" stop-color="#581c87" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#a855f7" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Shell -->
+  <circle cx="64" cy="64" r="60" fill="url(#cosmicBg)" stroke="url(#neonRing)" stroke-width="2.5" />
+
+  <!-- Inner Elevated Badge (Signature Emblem) -->
+  <circle cx="64" cy="64" r="46" fill="url(#cardGrad)" stroke="#c084fc" stroke-width="1.8" filter="url(#badgeShadow)" />
+
+  <!-- Stylized Cursive "R" Monogram Artwork (Matching Rushikesh's Brand Signature) -->
+  <g fill="url(#inkGrad)">
+    <!-- Swash / Flourish Tail on Left -->
+    <path d="M 33 67 C 31 63, 35 55, 41 50 C 44 47, 48 45, 52 44 C 47 47, 42 53, 39 59 C 36 64, 34 68, 33 67 Z" opacity="0.85" />
+
+    <!-- Main Stem & Ascender Loop -->
+    <path d="M 49 88 C 48 88, 47 87, 47 85 C 47 76, 49 58, 51 44 C 52 35, 54 28, 57 28 C 59 28, 59 31, 57 39 C 55 49, 53 68, 51 84 C 51 87, 50 88, 49 88 Z" />
+
+    <!-- Upper Calligraphic Cursive Loop -->
+    <path d="M 52 44 C 51 38, 52 31, 56 26 C 60 22, 67 22, 73 24 C 80 27, 85 33, 85 41 C 85 48, 80 54, 73 57 C 67 59, 61 58, 57 56 C 54 55, 53 54, 53 53 C 53 52, 55 52, 58 53 C 63 55, 68 55, 73 53 C 78 50, 81 45, 81 40 C 81 34, 77 28, 71 26 C 66 24, 60 25, 57 28 C 54 32, 53 38, 53 44 Z" />
+
+    <!-- Inner Core & Center Junction Knot -->
+    <path d="M 57 56 C 55 56, 54 55, 54 54 C 54 53, 56 52, 58 52 C 60 52, 61 53, 61 54 C 61 55, 59 56, 57 56 Z" />
+
+    <!-- Elegant Sweeping Right Leg with Upward Finial -->
+    <path d="M 58 55 C 63 56, 67 61, 71 68 C 75 75, 79 83, 85 86 C 89 88, 93 86, 95 82 C 96 80, 96 79, 97 80 C 97 82, 95 86, 91 88 C 86 90, 80 88, 76 83 C 72 77, 68 70, 64 64 C 62 60, 60 57, 58 55 Z" />
+
+    <!-- Subtle Secondary Signature Stroke -->
+    <path d="M 48 83 C 44 84, 40 83, 38 80 C 37 78, 38 77, 39 77 C 41 77, 43 80, 46 80 C 49 80, 52 79, 54 78 C 54 79, 53 81, 48 83 Z" opacity="0.7" />
+  </g>
+
+  <!-- Accent Shimmer Particle -->
+  <circle cx="89" cy="27" r="2.2" fill="#38bdf8" opacity="0.9" />
+  <circle cx="39" cy="31" r="1.5" fill="#c084fc" opacity="0.8" />
+</svg>
